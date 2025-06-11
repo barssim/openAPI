@@ -1,0 +1,12 @@
+src/main/java/ma/solide/openapi/model/ArticleEntity.class
+ma/solide/openAPI/api/ArticlesApiController.class
+org/openapitools/configuration/HomeController.class
+ma/solide/openAPI/model/Article.class
+ma/solide/openAPI/api/ApiUtil.class
+src/main/java/ma/solide/openapi/repository/ArticleRepository.class
+org/openapitools/RFC3339DateFormat.class
+ma/solide/openAPI/api/ArticlesApi.class
+ma/solide/openAPI/OpenApiApplication.class
+org/openapitools/configuration/SpringDocConfiguration.class
+org/openapitools/OpenApiGeneratorApplication.class
+src/main/java/ma/solide/openapi/service/ArticleService.class

@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: Article API
+  version: 1.0.0
+servers:
+- url: /
+paths:
+  /articles:
+    get:
+      operationId: getArticles
+      parameters:
+      - explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Article'
+                type: array
+          description: A list of articles
+      summary: List all articles
+      tags:
+      - articles
+      x-accepts:
+      - application/json
+      x-tags:
+      - tag: articles
+  /articles/{artNo}:
+    get:
+      operationId: getProductByArtNo
+      parameters:
+      - explode: false
+        in: path
+        name: artNo
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Article'
+          description: Article found
+        "404":
+          description: Article not found
+      summary: Info for a specific Article
+      x-accepts:
+      - application/json
+components:
+  schemas:
+    Article:
+      example:
+        name: name
+        id: 0
+        tag: tag
+      properties:
+        id:
+          format: int64
+          type: integer
+        name:
+          type: string
+        tag:
+          type: string
+      required:
+      - id
+      - name
+      type: object
