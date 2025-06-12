@@ -3,6 +3,7 @@ package ma.solide.openapi.controller;
 import ma.solide.openAPI.api.ArticlesApi;
 import ma.solide.openAPI.model.ArticleDto;
 import ma.solide.openapi.model.Article;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,6 +41,12 @@ public class ArticleController implements ArticlesApi {
             return dto;
         }).toList());
 
+    }
+
+    @Override
+    public ResponseEntity<ArticleDto> createArticle(ArticleDto articleDto) {
+        ArticleDto savedArticle = articleService.createArticle(articleDto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedArticle);
     }
 }
 

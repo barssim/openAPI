@@ -25,6 +25,27 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ArticleDto'
+    post:
+      tags:
+        - articles
+      summary: Add a new article to the store
+      description: ''
+      operationId: createArticle
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ArticleDto'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArticleDto'
+        '405':
+          description: Invalid input
+
+      requestBody:
+        $ref: '#/components/requestBodies/ArticleDto'
 
   /articles/{artNo}:
     get:
@@ -61,3 +82,16 @@ components:
           type: string
         tag:
           type: string
+
+  requestBodies:
+
+    ArticleDto:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ArticleDto'
+        application/xml:
+          schema:
+            $ref: '#/components/schemas/ArticleDto'
+      description: Article object that needs to be added to the store
+      required: true

@@ -1,3 +1,3 @@
-insert into ArticleEntity values(1, 'Stoßstang');
-insert into ArticleEntity values(2, 'Kotflügel');
-insert into ArticleEntity values(3, 'Autotür');
+insert into Article values(1, 'Stoßstang');
+insert into Article values(2, 'Kotflügel');
+insert into Article values(3, 'Autotür');
