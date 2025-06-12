@@ -1,11 +1,13 @@
 /home/ahmed-ubuntu/git/openAPI/src/main/java/ma/solide/openapi/OpenApiApplication.java
-/home/ahmed-ubuntu/git/openAPI/src/main/java/ma/solide/openapi/model/ArticleEntity.java
+/home/ahmed-ubuntu/git/openAPI/src/main/java/ma/solide/openapi/controller/ArticleController.java
+/home/ahmed-ubuntu/git/openAPI/src/main/java/ma/solide/openapi/model/Article.java
+/home/ahmed-ubuntu/git/openAPI/src/main/java/ma/solide/openapi/model/ArticleMapper.java
 /home/ahmed-ubuntu/git/openAPI/src/main/java/ma/solide/openapi/repository/ArticleRepository.java
 /home/ahmed-ubuntu/git/openAPI/src/main/java/ma/solide/openapi/service/ArticleService.java
 /home/ahmed-ubuntu/git/openAPI/target/generated-sources/openapi/src/main/java/ma/solide/openAPI/api/ApiUtil.java
 /home/ahmed-ubuntu/git/openAPI/target/generated-sources/openapi/src/main/java/ma/solide/openAPI/api/ArticlesApi.java
 /home/ahmed-ubuntu/git/openAPI/target/generated-sources/openapi/src/main/java/ma/solide/openAPI/api/ArticlesApiController.java
-/home/ahmed-ubuntu/git/openAPI/target/generated-sources/openapi/src/main/java/ma/solide/openAPI/model/Article.java
+/home/ahmed-ubuntu/git/openAPI/target/generated-sources/openapi/src/main/java/ma/solide/openAPI/model/ArticleDto.java
 /home/ahmed-ubuntu/git/openAPI/target/generated-sources/openapi/src/main/java/org/openapitools/OpenApiGeneratorApplication.java
 /home/ahmed-ubuntu/git/openAPI/target/generated-sources/openapi/src/main/java/org/openapitools/RFC3339DateFormat.java
 /home/ahmed-ubuntu/git/openAPI/target/generated-sources/openapi/src/main/java/org/openapitools/configuration/HomeController.java

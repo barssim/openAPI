@@ -15,11 +15,11 @@ import java.util.*;
 import jakarta.annotation.Generated;
 
 /**
- * Article
+ * ArticleDto
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-06-11T18:30:05.317679602+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
-public class Article {
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-06-12T11:03:46.544768828+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
+public class ArticleDto {
 
   private Long id;
 
@@ -27,19 +27,19 @@ public class Article {
 
   private String tag;
 
-  public Article() {
+  public ArticleDto() {
     super();
   }
 
   /**
    * Constructor with only required parameters
    */
-  public Article(Long id, String name) {
+  public ArticleDto(Long id, String name) {
     this.id = id;
     this.name = name;
   }
 
-  public Article id(Long id) {
+  public ArticleDto id(Long id) {
     this.id = id;
     return this;
   }
@@ -59,7 +59,7 @@ public class Article {
     this.id = id;
   }
 
-  public Article name(String name) {
+  public ArticleDto name(String name) {
     this.name = name;
     return this;
   }
@@ -79,7 +79,7 @@ public class Article {
     this.name = name;
   }
 
-  public Article tag(String tag) {
+  public ArticleDto tag(String tag) {
     this.tag = tag;
     return this;
   }
@@ -107,10 +107,10 @@ public class Article {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Article article = (Article) o;
-    return Objects.equals(this.id, article.id) &&
-        Objects.equals(this.name, article.name) &&
-        Objects.equals(this.tag, article.tag);
+    ArticleDto articleDto = (ArticleDto) o;
+    return Objects.equals(this.id, articleDto.id) &&
+        Objects.equals(this.name, articleDto.name) &&
+        Objects.equals(this.tag, articleDto.tag);
   }
 
   @Override
@@ -121,7 +121,7 @@ public class Article {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Article {\n");
+    sb.append("class ArticleDto {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    tag: ").append(toIndentedString(tag)).append("\n");

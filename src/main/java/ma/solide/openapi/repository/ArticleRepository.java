@@ -1,10 +1,10 @@
-package src.main.java.ma.solide.openapi.repository;
+package ma.solide.openapi.repository;
 
+import ma.solide.openapi.model.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import src.main.java.ma.solide.openapi.model.ArticleEntity;
 
 @Repository
-public interface ArticleRepository extends JpaRepository<ArticleEntity, Long> {
+public interface ArticleRepository extends JpaRepository<Article, Long> {
 }
 

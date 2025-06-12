@@ -24,7 +24,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Article'
+                  $ref: '#/components/schemas/ArticleDto'
 
   /articles/{artNo}:
     get:
@@ -42,13 +42,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Article'
+                $ref: '#/components/schemas/ArticleDto'
         '404':
           description: Article not found
 
 components:
   schemas:
-    Article:
+    ArticleDto:
       type: object
       required:
         - id
