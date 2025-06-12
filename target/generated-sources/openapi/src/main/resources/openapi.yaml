@@ -32,6 +32,32 @@ paths:
       - application/json
       x-tags:
       - tag: articles
+    post:
+      description: ""
+      operationId: createArticle
+      requestBody:
+        $ref: '#/components/requestBodies/ArticleDto'
+      responses:
+        "200":
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ArticleDto'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArticleDto'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: Add a new article to the store
+      tags:
+      - articles
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+      - application/xml
+      x-tags:
+      - tag: articles
   /articles/{artNo}:
     get:
       operationId: getProductByArtNo
@@ -56,6 +82,17 @@ paths:
       x-accepts:
       - application/json
 components:
+  requestBodies:
+    ArticleDto:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ArticleDto'
+        application/xml:
+          schema:
+            $ref: '#/components/schemas/ArticleDto'
+      description: Article object that needs to be added to the store
+      required: true
   schemas:
     ArticleDto:
       example:

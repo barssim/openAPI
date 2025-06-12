@@ -32,7 +32,7 @@ import java.util.Map;
 import java.util.Optional;
 import jakarta.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-06-12T11:03:46.544768828+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-06-12T19:06:01.305057482+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
 @Validated
 @Tag(name = "articles", description = "the articles API")
 public interface ArticlesApi {
@@ -40,6 +40,56 @@ public interface ArticlesApi {
     default Optional<NativeWebRequest> getRequest() {
         return Optional.empty();
     }
+
+    /**
+     * POST /articles : Add a new article to the store
+     * 
+     *
+     * @param articleDto Article object that needs to be added to the store (required)
+     * @return successful operation (status code 200)
+     *         or Invalid input (status code 405)
+     */
+    @Operation(
+        operationId = "createArticle",
+        summary = "Add a new article to the store",
+        description = "",
+        tags = { "articles" },
+        responses = {
+            @ApiResponse(responseCode = "200", description = "successful operation", content = {
+                @Content(mediaType = "application/xml", schema = @Schema(implementation = ArticleDto.class)),
+                @Content(mediaType = "application/json", schema = @Schema(implementation = ArticleDto.class))
+            }),
+            @ApiResponse(responseCode = "405", description = "Invalid input")
+        }
+    )
+    @RequestMapping(
+        method = RequestMethod.POST,
+        value = "/articles",
+        produces = { "application/xml", "application/json" },
+        consumes = { "application/json", "application/xml" }
+    )
+    
+    default ResponseEntity<ArticleDto> createArticle(
+        @Parameter(name = "ArticleDto", description = "Article object that needs to be added to the store", required = true) @Valid @RequestBody ArticleDto articleDto
+    ) {
+        getRequest().ifPresent(request -> {
+            for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
+                if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
+                    String exampleString = "{ \"name\" : \"name\", \"id\" : 0, \"tag\" : \"tag\" }";
+                    ApiUtil.setExampleResponse(request, "application/json", exampleString);
+                    break;
+                }
+                if (mediaType.isCompatibleWith(MediaType.valueOf("application/xml"))) {
+                    String exampleString = "<null> <id>123456789</id> <name>aeiou</name> <tag>aeiou</tag> </null>";
+                    ApiUtil.setExampleResponse(request, "application/xml", exampleString);
+                    break;
+                }
+            }
+        });
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+
+    }
+
 
     /**
      * GET /articles : List all articles

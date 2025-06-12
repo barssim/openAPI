@@ -18,7 +18,7 @@ import jakarta.annotation.Generated;
  * ArticleDto
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-06-12T11:03:46.544768828+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-06-12T19:06:01.305057482+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
 public class ArticleDto {
 
   private Long id;
