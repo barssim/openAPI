@@ -40,7 +40,7 @@ java -jar target/openAPI*.jar
 ### Port konfigurieren
 
 Standardport: `8080` 
-Du kannst den Port in der Datei `src/main/resources/application.yml` ändern:
+man kann den Port in der Datei `src/main/resources/application.yml` ändern:
 
 ```yml
 server.port=8091

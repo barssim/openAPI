@@ -31,7 +31,7 @@ class ArticleServiceTest {
 
     @Test
     void testSaveArticle_ShouldSaveTheArticle() {
-        // Given
+
         Article myArticle = new Article(4L, "AutoTeil");
         ArticleDto articleDto = ArticleMapper.toDto(Optional.of(myArticle));
 
