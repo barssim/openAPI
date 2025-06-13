@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.Optional;
 import jakarta.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-06-12T19:06:01.305057482+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-06-13T10:13:27.359231421+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
 @Controller
 @RequestMapping("${openapi.article.base-path:}")
 public class ArticlesApiController implements ArticlesApi {

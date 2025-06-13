@@ -72,7 +72,6 @@ components:
     ArticleDto:
       type: object
       required:
-        - id
         - name
       properties:
         id:

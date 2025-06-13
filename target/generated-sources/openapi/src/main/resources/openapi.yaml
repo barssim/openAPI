@@ -108,6 +108,5 @@ components:
         tag:
           type: string
       required:
-      - id
       - name
       type: object

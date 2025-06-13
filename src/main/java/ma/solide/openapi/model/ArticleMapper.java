@@ -15,7 +15,6 @@ public class ArticleMapper {
 
         Article article = optionalArticle.get();
         return new ArticleDto(
-                article.getId(),
                 article.getName()
         );
     }

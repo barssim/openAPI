@@ -18,7 +18,7 @@ import jakarta.annotation.Generated;
  * ArticleDto
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-06-12T19:06:01.305057482+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-06-13T10:13:42.591852200+02:00[Europe/Berlin]", comments = "Generator version: 7.8.0")
 public class ArticleDto {
 
   private Long id;
@@ -34,8 +34,7 @@ public class ArticleDto {
   /**
    * Constructor with only required parameters
    */
-  public ArticleDto(Long id, String name) {
-    this.id = id;
+  public ArticleDto(String name) {
     this.name = name;
   }
 
@@ -48,8 +47,8 @@ public class ArticleDto {
    * Get id
    * @return id
    */
-  @NotNull 
-  @Schema(name = "id", requiredMode = Schema.RequiredMode.REQUIRED)
+  
+  @Schema(name = "id", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("id")
   public Long getId() {
     return id;

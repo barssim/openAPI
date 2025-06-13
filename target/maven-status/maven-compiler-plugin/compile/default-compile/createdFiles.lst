@@ -9,7 +9,6 @@ org/openapitools/configuration/SpringDocConfiguration.class
 org/openapitools/OpenApiGeneratorApplication.class
 ma/solide/openapi/model/Article.class
 ma/solide/openAPI/model/ArticleDto.class
-ma/solide/openapi/DataSourceBean.class
 ma/solide/openapi/repository/ArticleRepository.class
 ma/solide/openapi/service/ArticleService.class
 ma/solide/openapi/OpenApiApplication.class
